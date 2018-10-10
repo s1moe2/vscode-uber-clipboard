@@ -17,8 +17,42 @@
     "contributes": {
         "commands": [
             {
-                "command": "extension.sayHello",
-                "title": "Hello World"
+                "command": "uberclipboard.copy",
+                "title": "Copy to UberClipboard"
+            },
+            {
+                "command": "uberclipboard.cut",
+                "title": "Cut to UberClipboard"
+            },
+            {
+                "command": "uberclipboard.paste",
+                "title": "Paste from UberClipboard"
+            }
+        ],
+        "keybindings": [
+            {
+                "key": "ctrl+c",
+                "mac": "cmd+c",
+                "when": "editorFocus",
+                "command": "uberclipboard.copy"
+            },
+            {
+                "key": "ctrl+x",
+                "mac": "cmd+x",
+                "when": "editorFocus",
+                "command": "uberclipboard.cut"
+            },
+            {
+                "key": "ctrl+v",
+                "mac": "cmd+v",
+                "when": "editorFocus",
+                "command": "uberclipboard.paste"
+            },
+            {
+                "key": "ctrl+shift+v",
+                "mac": "cmd+shift+v",
+                "when": "editorFocus",
+                "command": "uberclipboard.selectPaste"
             }
         ]
     },
